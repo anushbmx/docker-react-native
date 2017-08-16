@@ -34,6 +34,7 @@ Contains the following android packages
 
 Node Version : 8.3.0
 
+Yarn is added to save 15 precious seconds.
 
 ### Pull from Docker Hub
 ```
