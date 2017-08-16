@@ -152,5 +152,3 @@ RUN rm -rf /var/lib/apt/lists/*
 ENV ANDROID_HOME /opt/android-sdk-linux
 
 RUN apt-get clean
-
-VOLUME ["/opt/android-sdk-linux"]
