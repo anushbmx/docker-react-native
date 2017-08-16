@@ -149,6 +149,7 @@ ENV NODEJS_VERSION=8.3.0 \
 RUN curl -sL https://nodejs.org/dist/v${NODEJS_VERSION}/node-v${NODEJS_VERSION}-linux-x64.tar.gz | tar xz --strip-components=1 
 RUN rm -rf /var/lib/apt/lists/*
 
+# Installing Yarn npm package manager
 RUN npm i -g yarn 
 
 ENV ANDROID_HOME /opt/android-sdk-linux
