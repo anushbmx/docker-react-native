@@ -9,7 +9,7 @@ MAINTAINER Anush
 RUN apt-get update -y && \
 	apt-get install -y \
 		curl \
-		git \
+		git
 
 # Base (non android specific) tools
 # -> should be added to bitriseio/docker-bitrise-base
