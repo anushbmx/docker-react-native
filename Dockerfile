@@ -15,9 +15,9 @@ RUN apt-get update -y && \
 # -> should be added to bitriseio/docker-bitrise-base
 
 # Dependencies to execute Android builds
-#RUN dpkg --add-architecture i386
-#RUN apt-get update -qq
-#RUN DEBIAN_FRONTEND=noninteractive apt-get install -y openjdk-8-jdk libc6:i386 libstdc++6:i386 libgcc1:i386 libncurses5:i386 libz1:i386
+RUN dpkg --add-architecture i386
+RUN apt-get update -qq
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y openjdk-8-jdk libc6:i386 libstdc++6:i386 libgcc1:i386 libncurses5:i386 zlib1g:i386 libz1:i386
 RUN apt-get install -y openjdk-8-jdk wget expect 
 
 # ------------------------------------------------------
@@ -148,6 +148,8 @@ ENV NODEJS_VERSION=8.3.0 \
 # Installing Node
 RUN curl -sL https://nodejs.org/dist/v${NODEJS_VERSION}/node-v${NODEJS_VERSION}-linux-x64.tar.gz | tar xz --strip-components=1 
 RUN rm -rf /var/lib/apt/lists/*
+
+RUN npm i -g yarn 
 
 ENV ANDROID_HOME /opt/android-sdk-linux
 
